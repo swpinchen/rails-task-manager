@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Add a Task</h1>
+  <%# <form action="/restaurants" method="post">
+    <input type="text" name="parmater_name">
+  </form> %>
+  <% if @task.errors.any? %>
+    <% @task.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+  <%= render 'tasks/form' %>
+</div>
+
+<%# <h2>New</h2> %>
+<%# <%= form_for(@task) do |f| %>
+  <%# <%= f.label :title %>
+  <%# <%= f.text_field :title %>
+  <%# <%= f.label :details %>
+  <%# <%= f.text_field :details %>
+  <%# <%= f.submit %>
+<%# <% end %>

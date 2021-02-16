@@ -1,0 +1,20 @@
+<!-- app/views/restaurants/show.html.erb -->
+<h2>Title: <%= @task.title %></h2>
+<h3>Details: <%= @task.details %></h3>
+<p>Completed: <%= @task.completed %></p>
+<p>Updated: <%= @task.updated_at %></p>
+<div>
+<%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+</div>
+<div>
+  <%= link_to "Back to task list", tasks_path %>
+</div>
+
+    <%# t.string "title"
+    t.text "details"
+    t.boolean "completed", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false %>
