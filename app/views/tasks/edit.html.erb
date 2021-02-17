@@ -1,13 +1,3 @@
-<h2>Edit</h2>
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
-
-
 <div class="container">
   <h1>Edit <%= @task.title %></h1>
   <%# <form action="/restaurants" method="post">
@@ -20,3 +10,5 @@
   <% end %>
   <%= render 'tasks/form' %>
 </div>
+
+
